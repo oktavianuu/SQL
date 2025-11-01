@@ -26,3 +26,14 @@ Dates come up very frequently in real world databases. They are stored in two wa
 The DATE format has the year first, then the month, and then the day. It looks like this:
 `YYYY-[M]M-[D]D`
 The `DATETIME` format is similar but with time added at the end. 
+
+### EXTRACT
+This command is useful to extract **DAY** from **DATE**. Here is the example of how we use it:
+```sql
+"""
+SELECT Name, EXTRACT (DAY from DATE) AS Day
+FROM `bigquery_project.dataset_name`
+"""
+```
+The command above will extract `DAY` from `DATE` and save it in `Day` column. More about `DATE`  can be found [here](https://cloud.google.com/bigquery/docs/reference/legacy-sql#datetimefunctions).
+
